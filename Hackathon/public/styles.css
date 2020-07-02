@@ -1,0 +1,31 @@
+body { 
+    background-color: #ffdede;
+}
+
+.card-action{
+    margin: 5px;
+}
+.card-action a {
+    text-align: center;
+    font-family: rockwell;
+    font-weight: bold;
+}
+
+.card.horizontal {
+    border: 7px solid white;
+    box-shadow: 16px 16px 3px  black;
+    min-height: 300px;
+    background-color:lightgrey;
+    transition: .6s 0s;
+}
+
+.card.horizontal:hover {
+    border: 7px solid #e1527d;
+    box-shadow: 16px 16px 3px  black;
+    min-height: 300px;
+    background-color: white;
+}
+
+.card.horizontal:hover .card-image .profile img {
+    border: 8px solid rgb(0, 102, 153);
+}

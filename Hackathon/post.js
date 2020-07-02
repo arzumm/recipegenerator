@@ -11,7 +11,9 @@ let recipes = []
 let results = []
 //just an example to get Search.html
 exports.getPosts=(req,res)=>{
-    res.sendFile(path.join(__dirname + '/Search.html'));
+    // res.sendFile(path.join(__dirname + '/Search.html'));
+    res.render('main', {layout : 'index', output: ['nothing here yet'], listExists: false});
+    
 }
 //Just battery temp example
 exports.getbattery=(req,res,next)=>{
@@ -53,6 +55,7 @@ exports.getrecipe=(req,res,next)=>{
         results.sort(function(a,b){ 
             return b[0] - a[0];
         })
-        res.send(results.slice(0,10))
+
+        res.render('main', {layout: 'index', output: results.slice(0,20), listExists: true})
     })
 }
