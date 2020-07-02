@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.searchbar{
+    margin-top:25px;
+   margin-left:283px;
+   width:100%;
+}
+.bar{
+    border-radius:0;
+    -webkit-box-shadow: 2px 3px 0px -2px #ccc;
+    padding:10px;
+    border:0px;
+    outline: none;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #CCC;
+    }
+.bar:hover{
+    -webkit-box-shadow: 3px 6px 7px -3px #ccc;
+}
+
+body { 
+    background-color: #ffdede;
+}
+#logo {
+        margin:auto;
+        background-color: #ffdede;
+        text-align:center;
+    }
+
+#logo img {
+        margin:auto;
+    }
+
+    .btn {
+        color: rgb(34, 42, 53);
+        font-family: 'roboto';
+        font-size: 18px;
+        font-weight: bold;
+        background-color: white;
+        border: 3px solid white;
+        height: 32px;
+        width: 50px;
+        margin-left: 15px;
+        padding: 3px;
+        box-shadow: 3px 3px 0px 1px grey;
+        transition: .5s;
+        transition-delay: 0s;
+
+    }
+
+</style>
+</head>
+<body>
+    <!-- <div id="logo">
+    <a href="/"> <img src="images/1.png" width="1054" height = "608"> </img> </a>
+  </div> -->
+
+  <form action = '/getrecipe' method = 'GET'>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-12 col-xs-12">
+            <div class="searchbar">
+                <div class="form-group ">
+                    <input type="text" name = 'ingredients' class="bar" style="width:588px; height:44px; outline:none;" class="form-control" >
+                    <input type="submit" value="Go">
+                     <a href="/"><i style="margin-left:559px; top:-30px; "class="glyphicon glyphicon-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+</body>
+</html>

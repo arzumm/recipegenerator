@@ -1,0 +1,4 @@
+1. Go to the folder  'Hackathon' from terminal.
+2. Enter - npm install
+3. Enter - npm run dev 
+4. Into the browser goto address -http://localhost:27017/
