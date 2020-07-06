@@ -1,20 +1,18 @@
 
+
+  <div id="logo">
+     <img src="/3.png" width="1054" height = "608"> </img> 
+  </div> 
+
 <div>
 
- <form action = '/getrecipe' method = 'GET'>
-  <div class="container">
-    <div class="row">
-        <div class="col-md-12 col-xs-12">
-            <div class="searchbar">
-                <div class="form-group ">
-                    <input type="text" name = 'ingredients' class="bar" style="width:588px; height:44px; outline:none;" class="form-control" >
-                    <input type="submit" value="Go">
-                     {{!-- <a href="/"><i style="margin-left:559px; top:-30px; "class="glyphicon glyphicon-search"></i></a> --}}
-                </div>
-            </div>
-        </div>
+
+ <form action = '/getrecipe' method = 'GET' class = 'form-inline global-search'>
+    <div class="form-group ui-widget">
+        <input class = 'form-control' type="text" name = 'ingredients' placeholder = 'Enter Ingredients'>
+        <input class = 'btn' type="submit" value="Go">
+        {{!-- <a href="/"><i style="margin-left:559px; top:-30px; "class="glyphicon glyphicon-search"></i></a> --}}
     </div>
-</div>
 </form>
 {{!-- depending on the value of the listExists variable --}}
 {{!-- if it’s true then the list will be rendered --}}
@@ -22,13 +20,14 @@
 {{#if listExists}} 
   <ul>
     {{#each output}}
+    <br><br> 
     <div class="container my-auto">
       <div class="col s12">
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
               <h3> {{this.1.title}}</h3>
-              <p> {{this.1.ingredients}}</p>
+              {{!-- <p> {{this.1.ingredients}}</p> --}}
               <br><br>
               <p class='speech'>{{this.1.instructions}}</p>
             </div>
